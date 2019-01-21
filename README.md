@@ -23,9 +23,9 @@ https://community.arduboy.com/t/make-your-own-arduboy-game-part-1-setting-up-you
 
 ## Developers
 
-Anthony Luc – [@anthonyvluc](https://github.com/anthonyvluc)
-Donald Luc – [@donaldvluc](https://github.com/donaldvluc)
-Michael Wang – [@MichaelND](https://github.com/MichaelND)
+* Anthony Luc – [@anthonyvluc](https://github.com/anthonyvluc)
+* Donald Luc – [@donaldvluc](https://github.com/donaldvluc)
+* Michael Wang – [@MichaelND](https://github.com/MichaelND)
 
 [https://github.com/donaldvluc/super-smash-ardubros](https://github.com/donaldvluc/super-smash-ardubros)
 
