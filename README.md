@@ -7,7 +7,9 @@ Our game is ... TODO
 
 ## Installation
 
-TODO
+Arduboy2
+ArduboyTones
+midi2tones -- update makefile
 
 ## Gameplay
 
