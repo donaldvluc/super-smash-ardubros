@@ -8,11 +8,14 @@
 
 #include "Arduboy.h"
 
+#include "Character.h"
+
 Arduboy arduboy;
 
 void setup()
 {
   arduboy.begin();
+  arduby.setFrameRate(60);
   arduboy.clear();
   arduboy.setTextSize(4);
   arduboy.setCursor(0,0);
@@ -23,11 +26,10 @@ void setup()
 
 int x = 0, y = 0;
 
-void loop ()
+void loop()
 {
   // pause render until it's time for the next frame
-  if (!(arduboy.nextFrame()))
-    return;
+  if (!(arduboy.nextFrame())) return;
 
   if (arduboy.pressed(UP_BUTTON)) {
     y-=1;
@@ -335,4 +337,28 @@ void loop ()
     arduboy.tunes.tone(659, 642.8565);
     delay(714.285);
   }
+}
+
+void title()
+{
+  arduboy.print("Title");
+  arduboy.display();
+}
+
+void game()
+{
+  arduboy.print("Game");
+  arduboy.display();
+}
+
+void init_game()
+{
+  arduboy.print("Init Game");
+  arduboy.display();
+}
+
+void game_over()
+{
+  arduboy.print("Game Over");
+  arduboy.display();
 }
