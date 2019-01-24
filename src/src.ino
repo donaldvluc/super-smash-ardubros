@@ -13,6 +13,7 @@ Arduboy arduboy;
 void setup()
 {
   arduboy.begin();
+  arduboy.clear();
   arduboy.setTextSize(4);
   arduboy.setCursor(0,0);
   arduboy.print("Music\nDemo");
@@ -48,7 +49,6 @@ void loop ()
   arduboy.setCursor(x,y);
   arduboy.print("Music\nDemo");
   arduboy.display();
-
   
   // play the tune if we aren't already
   if (!arduboy.tunes.playing()) {
