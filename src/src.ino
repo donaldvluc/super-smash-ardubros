@@ -1,3 +1,11 @@
+/**
+ * src.ino
+ * Anthony Luc (aluc)
+ * Donald Luc (dluc)
+ * Michael Wang (mwang6)
+ * January 20th, 2019
+ */
+
 #include "Arduboy.h"
 
 Arduboy arduboy;
