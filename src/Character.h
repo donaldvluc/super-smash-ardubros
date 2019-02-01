@@ -1,12 +1,14 @@
 #pragma once
 
 #include "Arduboy.h"
+#include "Game.h"
+#include "CharacterState.h"
 
 class Character
 {
 private:
-  Game *m_game;
-  CharacterState *m_state;
+  Game m_game;
+  CharacterState m_state;
   int m_x;
   int m_y;
 
@@ -19,6 +21,5 @@ public:
   void move_up(void);
   void move_down(void);
 
-  void change_state(const CharacterState state) override;
-}
-
+  void change_state(const CharacterState state);
+};

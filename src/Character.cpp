@@ -3,6 +3,7 @@
 Character::Character(void)
   : m_x(0), m_y(0)
 {
+  
 }
 
 Character::Character(int x, int y)

@@ -8,7 +8,7 @@
 
 #include "Game.h"
 
-Arduboy arduboy;
+Game game;
 
 void setup()
 {
