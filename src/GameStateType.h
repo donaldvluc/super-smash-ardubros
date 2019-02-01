@@ -1,4 +1,5 @@
-#pragma once
+#ifndef GAME_STATE_TYPE_H
+#define GAME_STATE_TYPE_H
 
 
 enum class GameStateType
@@ -8,3 +9,5 @@ enum class GameStateType
   EndScreen,
   Intro
 };
+
+#endif

@@ -1,6 +1,6 @@
-#pragma once
+#ifndef CHARACTER_H
+#define CHARACTER_H
 
-#include "Arduboy.h"
 #include "Game.h"
 #include "CharacterState.h"
 
@@ -15,6 +15,7 @@ private:
 public:
   Character(void);
   Character(int x, int y);
+  ~Character();
 
   void move_left(void);
   void move_right(void);
@@ -23,3 +24,5 @@ public:
 
   void change_state(const CharacterState state);
 };
+
+#endif

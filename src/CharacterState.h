@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef CHARACTER_STATE_H
+#define CHARACTER_STATE_H
 
 enum class CharacterState
 {
@@ -8,4 +8,6 @@ enum class CharacterState
   Attacking,
   Shielding,
   Grabbing
-}
+};
+
+#endif
