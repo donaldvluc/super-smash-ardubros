@@ -1,21 +1,13 @@
 #include "StartScreenState.h"
 
-StartScreenState::StartScreenState(GameContext context)
-{
-}
-
-~StartScreenState::StartScreenState(void)
-{
-}
-
-StartScreenState::StartScreenState(GameContext context)
+StartScreenState::StartScreenState(GameContext* context)
 {
   m_context = context;
 }
 
 void StartScreenState::start(void)
 {
-  auto & arduboy = m_context.arduboy;
+  auto & arduboy = m_context->arduboy;
 
   arduboy.begin();
   arduboy.setFrameRate(60);

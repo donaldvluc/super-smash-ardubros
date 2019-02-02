@@ -1,12 +1,9 @@
 #ifndef GAME_H
 #define GAME_H
 
-
-#include "GameContext.h"
 #include "GameState.h"
+#include "GameContext.h"
 #include "GameStateType.h"
-
-#include "StartScreenState.h"
 
 class Game
 {

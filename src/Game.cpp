@@ -1,5 +1,7 @@
 #include "Game.h"
 
+#include "StartScreenState.h"
+
 void Game::setup(void)
 {
   auto & arduboy = m_context->arduboy;
@@ -42,7 +44,7 @@ GameState* Game::create_state(const GameStateType state_type)
 {
   switch(state_type)
   {
-    case GameStateType::StartScreen: return new StartScreenState();
+    case GameStateType::StartScreen: return new StartScreenState(m_context);
     default: return nullptr; 
   }
 }
