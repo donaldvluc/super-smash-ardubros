@@ -34,8 +34,9 @@ void Game::loop(void)
   } else if (arduboy.pressed(B_BUTTON)) {
     arduboy.invert(false);
   }
-
+  
   arduboy.clear();
+  arduboy.print("TEST");
 
   /* Display to screen. */
   arduboy.display();
