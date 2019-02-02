@@ -36,7 +36,6 @@ void Game::loop(void)
   }
   
   arduboy.clear();
-  arduboy.print("TEST");
 
   /* Display to screen. */
   arduboy.display();
