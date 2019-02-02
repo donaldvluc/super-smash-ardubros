@@ -9,7 +9,7 @@ class Game
 {
 private:
   GameState* m_current_state;
-  GameContext* m_context;
+  GameContext* m_context = new GameContext();
 
 public:
   Arduboy arduboy;

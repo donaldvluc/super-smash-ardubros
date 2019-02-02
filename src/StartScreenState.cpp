@@ -5,6 +5,10 @@ StartScreenState::StartScreenState(GameContext* context)
   m_context = context;
 }
 
+StartScreenState::~StartScreenState()
+{
+}
+
 void StartScreenState::start(void)
 {
   auto & arduboy = m_context->arduboy;

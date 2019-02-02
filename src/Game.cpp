@@ -3,7 +3,7 @@
 #include "StartScreenState.h"
 
 Game::Game(void)
-{  
+{
 }
 
 Game::~Game(void)

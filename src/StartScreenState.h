@@ -8,6 +8,7 @@ class StartScreenState : public GameState
 private:
 public:
   StartScreenState(GameContext* context);
+  ~StartScreenState(void);
   void start(void);
 };
 
