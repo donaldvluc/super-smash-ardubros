@@ -2,6 +2,14 @@
 
 #include "StartScreenState.h"
 
+Game::Game(void)
+{  
+}
+
+Game::~Game(void)
+{  
+}
+
 void Game::setup(void)
 {
   auto & arduboy = m_context->arduboy;

@@ -11,6 +11,10 @@ Character::Character(int x, int y)
 {
 }
 
+Character::~Character()
+{
+}
+
 void Character::move_left(void)
 {
   if (m_x > 0) --m_x;
