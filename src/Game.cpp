@@ -22,16 +22,14 @@ void Game::menu_loop(void)
 {
   auto & arduboy = m_context->arduboy;
 
-  while(true)
+  bool continue_loop = true;
+  while(continue_loop)
   {
     /* Pause render until it's time for the next frame. */
     if (!arduboy.nextFrame()) return;
 
     /* Handle input from user. */
-    handle_user_menu_input();
-
-    /* Display to screen. */
-    arduboy.display();
+    handle_user_menu_input(continue_loop);
   }
 }
 
@@ -48,9 +46,9 @@ void Game::game_loop(void)
     if (!arduboy.nextFrame()) return;
 
     /* Handle input from user. */
-    bool continue_loop = handle_user_game_input();
-    if (continue_loop == false)
-      break
+//    bool continue_loop = handle_user_game_input();
+//    if (continue_loop == false)
+//      break;
 
     /* Display to screen. */
     arduboy.display();
@@ -71,39 +69,45 @@ GameState* Game::create_state(const GameStateType state_type)
   }
 }
 
-bool Game::handle_user_menu_input(void)
+void Game::handle_user_menu_input(bool &continue_loop)
 {
   auto & arduboy = m_context->arduboy;
 
-  bool continue_loop = true;
   if (arduboy.pressed(A_BUTTON)) {
-    continue_loop = false
+    continue_loop = false;
   } else if (arduboy.pressed(B_BUTTON)) {
-    play_lifelight();
+    continue_loop = true;
+//    play_lifelight();
+    arduboy.clear();
+    arduboy.print("B pressed");
+    arduboy.display();
   }
-
-  return continue_loop;
 }
 
 void Game::handle_user_game_input(void)
 {
   auto & arduboy = m_context->arduboy;
 
-  if (arduboy.pressed(UP_BUTTON)) {
-    arduboy.print("UP BUTTON");
-  } else if (arduboy.pressed(DOWN_BUTTON)) {
-    arduboy.print("DOWN BUTTON");
-  } else if (arduboy.pressed(LEFT_BUTTON)) {
-    arduboy.print("LEFT BUTTON");
-  } else if (arduboy.pressed(RIGHT_BUTTON)) {
-    arduboy.print("RIGHT BUTTON");
-  }
+//  if (arduboy.pressed(UP_BUTTON)) {
+//    arduboy.print("UP BUTTON");
+//  } else if (arduboy.pressed(DOWN_BUTTON)) {
+//    arduboy.print("DOWN BUTTON");
+//  } else if (arduboy.pressed(LEFT_BUTTON)) {
+//    arduboy.print("LEFT BUTTON");
+//  } else if (arduboy.pressed(RIGHT_BUTTON)) {
+//    arduboy.print("RIGHT BUTTON");
+//  }
 
 }
 
 void Game::play_lifelight(void)
 {
   auto & arduboy = m_context->arduboy;
+
+  arduboy.clear();
+  arduboy.setCursor(0,0);
+  arduboy.print("Playing theme song: Lifelight");
+  arduboy.display();
 
   arduboy.tunes.tone(329, 241.0711875);
   delay(267.856875);

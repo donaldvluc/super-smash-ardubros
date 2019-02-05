@@ -23,7 +23,7 @@ public:
 
   void change_state(const GameState* state);
   GameState* create_state(const GameStateType state_type);
-  bool handle_user_menu_input(void);
+  void handle_user_menu_input(bool &b);
   void handle_user_game_input(void);
 
   void play_lifelight(void);
