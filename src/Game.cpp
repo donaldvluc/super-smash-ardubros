@@ -75,12 +75,17 @@ void Game::handle_user_menu_input(bool &continue_loop)
 
   if (arduboy.pressed(A_BUTTON)) {
     continue_loop = false;
+
+    arduboy.print("A pressed");
+    arduboy.display();
   } else if (arduboy.pressed(B_BUTTON)) {
     continue_loop = true;
 //    play_lifelight();
-    arduboy.clear();
-    arduboy.print("B pressed");
-    arduboy.display();
+//    arduboy.clear();
+//    arduboy.print("B pressed");
+//    arduboy.display();
+  } else {
+    continue_loop = true;
   }
 }
 
@@ -104,7 +109,7 @@ void Game::play_lifelight(void)
 {
   auto & arduboy = m_context->arduboy;
 
-  arduboy.clear();
+  // arduboy.clear();
   arduboy.setCursor(0,0);
   arduboy.print("Playing theme song: Lifelight");
   arduboy.display();
