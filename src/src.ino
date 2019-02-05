@@ -17,5 +17,6 @@ void setup()
 
 void loop()
 {
-  game.loop();
+  game.menu_loop();
+  game.game_loop();
 }
