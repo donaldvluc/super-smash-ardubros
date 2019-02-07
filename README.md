@@ -5,25 +5,19 @@ Super Smash Bros Ultimate is the most recent installment to the Smash Bros franc
 
 Super Smash Ardubros is an 8-bit inspired Smash game playable on the Arduboy. The goal is to have 8-bit Smash Bros characters battling in glory to an 8-bit version of the Smash Ultimate theme song.
 
-ADD CONTEXT OF ARDUBOY IN COMPUTING HISTORY
- 
-ADD IMPORTANCE OF ARDUBOY AS A HISTORICAL ARTIFACT
-
-![](header.png)
-
 ## Installation
 
-Arduboy
+Download the source code and add it to the Arduino program.
 
 ## Gameplay
 
-TODO
+Press `A` to start the game or `B` for the intro and song. In the game, you'll play as Mr. Game and Watch and fight the Sandbag. You have a variety of neutral moves for `A` and `B`, but aerials are not implemented yet. Beat the Sandbag as fast as you can and win!
 
 ## Development Setup
 
-TODO
+Use this to setup your development evironment:
 
-https://community.arduboy.com/t/make-your-own-arduboy-game-part-1-setting-up-your-computer/2336
+[https://community.arduboy.com/t/make-your-own-arduboy-game-part-1-setting-up-your-computer/2336](https://community.arduboy.com/t/make-your-own-arduboy-game-part-1-setting-up-your-computer/2336)
 
 ## Developers
 
@@ -43,4 +37,9 @@ https://community.arduboy.com/t/make-your-own-arduboy-game-part-1-setting-up-you
 
 ## Sources
 
-TODO
+- BeepBox - https://beepbox.co
+- 8-bit Smash Ultimate Theme - https://scratch.mit.edu/discuss/topic/170380/?page=105
+- Game and Watch - http://tsgk.captainn.net/index.php?p=search&q=game
+- Image Converters - https://community.arduboy.com/t/all-the-arduboy-image-converters/3568
+- MIDI Converter - https://extramaster.net/tools/midiToArduino/
+- [Unused] Mr. Game & Watch Sound Effects - https://www.youtube.com/watch?v=vmZMuA4sbDw
