@@ -14,6 +14,7 @@ Arduboy arduboy;
 /* Boundaries. */
 int x = 0, y = 29;
 int play = 0;
+int intro = 0;
 
 /* Sandbag variables. */
 int bag_x = 85, bag_y = 29;
@@ -150,6 +151,10 @@ void loop ()
       delay(178.57125);
       arduboy.tunes.tone(587, 160.714125);
       delay(178.57125);
+      if (arduboy.pressed(B_BUTTON)) {
+        delay(1000);
+        goto out_intro;
+      }
       arduboy.tunes.tone(554, 241.0711875);
       delay(267.856875);
       arduboy.tunes.tone(493, 241.0711875);
@@ -166,6 +171,10 @@ void loop ()
       delay(357.1425);
       arduboy.tunes.tone(391, 160.714125);
       delay(178.57125);
+      if (arduboy.pressed(B_BUTTON)) {
+        delay(1000);
+        goto out_intro;
+      }
       arduboy.tunes.tone(440, 160.714125);
       delay(178.57125);
       arduboy.tunes.tone(493, 160.714125);
@@ -192,6 +201,10 @@ void loop ()
       delay(535.71375);
       arduboy.tunes.tone(659, 80.3570625);
       delay(89.285625);
+      if (arduboy.pressed(B_BUTTON)) {
+        delay(1000);
+        goto out_intro;
+      }
       arduboy.tunes.tone(739, 80.3570625);
       delay(89.285625);
       arduboy.tunes.tone(783, 241.0711875);
@@ -221,6 +234,10 @@ void loop ()
       arduboy.tunes.tone(739, 482.142375);
       delay(535.71375);
       arduboy.tunes.tone(659, 80.3570625);
+      if (arduboy.pressed(B_BUTTON)) {
+        delay(1000);
+        goto out_intro;
+      }
       delay(89.285625);
       arduboy.tunes.tone(739, 80.3570625);
       delay(89.285625);
@@ -260,6 +277,10 @@ void loop ()
       delay(714.285);
       arduboy.tunes.tone(783, 241.0711875);
       delay(267.856875);
+      if (arduboy.pressed(B_BUTTON)) {
+        delay(1000);
+        goto out_intro;
+      }
       arduboy.tunes.tone(698, 241.0711875);
       delay(267.856875);
       arduboy.tunes.tone(783, 160.714125);
@@ -305,6 +326,10 @@ void loop ()
       delay(357.1425);
       arduboy.tunes.tone(1046, 160.714125);
       delay(178.57125);
+      if (arduboy.pressed(B_BUTTON)) {
+        delay(1000);
+        goto out_intro;
+      }
       arduboy.tunes.tone(987, 160.714125);
       delay(178.57125);
       arduboy.tunes.tone(880, 160.714125);
@@ -324,6 +349,8 @@ void loop ()
     else if (arduboy.pressed(A_BUTTON)) {
       play = 1;
     }
+out_intro: ;
+  
   }
 
   // Game Loop
@@ -445,9 +472,13 @@ void loop ()
     // Victory
     if (score >= 150) {
       play = 2;
-      arduboy.tunes.tone(700, 100);
-      arduboy.tunes.tone(780, 100);
+      arduboy.tunes.tone(300, 200);
+      arduboy.tunes.tone(380, 200);
+      arduboy.tunes.tone(1100, 600);
+      arduboy.tunes.tone(600, 600);
+      arduboy.tunes.tone(650, 600);
       arduboy.tunes.tone(900, 400);
+      arduboy.tunes.tone(950, 600);
       arduboy.clear();
       arduboy.invert(false);
       arduboy.setCursor(0,0);
